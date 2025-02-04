@@ -1,0 +1,134 @@
+/* СТИЛИЗАЦИЯ HEADER */
+:root {
+	--accent-color: #8C7FCC;
+	--accent-color-light: #c8c8ff;
+	--text-color: #383838;
+	--text-color-white: #FBFBFF;
+	--gap_1: 150px;
+	--gap_2: 250px;
+	--gap_section: 100px;
+}
+
+.menu_header {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+#menu_font {
+	color: var(--text-color);
+	text-transform: lowercase;
+}
+
+#menu_font:hover {
+	text-decoration: underline;
+	color: var(--accent-color);
+}
+
+#logo_font {
+	width: fit-content;
+	color: var(--text-color);
+	line-height: 15px;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+.container_menu {
+	background-color: var(--text-color-white);
+	width: 95%;
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.menu_right_left {
+	display: flex;
+	width: 35%;
+	align-items: center;
+}
+
+.menu_ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.menu_midle {
+	width: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#icon {
+	width: 30px;
+}
+
+.container_logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	row-gap: 15px;
+}
+
+#logo_link {
+	text-decoration: none;
+}
+
+#icon_logo {
+	width: 30px;
+}
+
+/* СТИЛИЗАЦИЯ FOOTER */
+.container_footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#footer {
+	background: linear-gradient(rgba(219, 219, 255, 1) 15%, rgba(140, 127, 204, 1) 85%);
+}
+
+.footer_nav {
+	padding: 0 var(--gap_1);
+	display: flex;
+	flex-direction: row;
+	padding-top: 50px;
+	align-self: center;
+	column-gap: 90px;
+}
+
+.cont_h3 {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.icons {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	margin-top: 50px;
+}
+
+#right {
+	color: white;
+	text-align: right;
+	opacity: 80%;
+}

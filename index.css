@@ -1,0 +1,279 @@
+/* ПЕРЕМЕННЫЕ */
+:root {
+	--accent-color: #8C7FCC;
+	--accent-color-light: #c8c8ff;
+	--text-color: #383838;
+	--text-color-white: #FBFBFF;
+	--gap_1: 150px;
+	--gap_2: 250px;
+	--gap_section: 100px;
+}
+
+body {
+	background: linear-gradient(var(--accent-color-light) 15%,
+			var(--accent-color) 35%,
+			var(--accent-color-light) 70%,
+			var(--accent-color) 100%);
+}
+
+/* HERO */
+.section_main_screen {
+	background: var(--text-color-white);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.section_main_screen_content {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+
+.rings {
+	width: 40%;
+	margin-right: 50px;
+}
+
+.paper {
+	width: 100%;
+}
+
+.store_name {
+	width: 100%;
+}
+
+/* NEW COLLECTOIN */
+.section_new_collection {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.lustre {
+	height: 90px;
+}
+
+.section_new_collection_items {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article_new {
+	width: 100%;
+}
+
+#new1 {
+	grid-area: n1;
+}
+
+#new2 {
+	grid-area: n2;
+}
+
+#new5 {
+	width: 100%;
+	grid-area: n5;
+}
+
+#new3 {
+	grid-area: n3;
+}
+
+#new4 {
+	grid-area: n4;
+}
+
+.grid {
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	grid-template-columns: 1.25fr 1fr 1.25fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 5%;
+	grid-row-gap: 5%;
+	grid-template-areas:
+		"n1 n5 n3"
+		"n2 n5 n4";
+}
+
+.article_new,
+.article_new5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 100%;
+}
+
+.article_new5 {
+	width: 100%;
+}
+
+/* NEW COLLECTION */
+.section_about_new_collection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 50px;
+	background-color: var(--text-color-white);
+}
+
+.about_new_collection_text {
+	display: flex;
+	flex-direction: column;
+}
+
+#stars {
+	margin-right: 50px;
+}
+
+/* ABOUT COMPAHY */
+.section_about_company {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: var(--text-color-white);
+	overflow: hidden;
+}
+
+.hand {
+	width: 40%;
+}
+
+/* наши услуги */
+.section_our_services {
+	height: max-content;
+	background-color: var(--text-color-white);
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.container_our_services {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.service {
+	position: relative;
+	overflow: hidden;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: space-between;
+	border-bottom: solid 5px var(--accent-color);
+	transition: 1.5s;
+}
+
+#service_list li {
+	list-style: outside;
+	list-style-type: disc;
+}
+
+.service_list {
+	margin-top: 15px;
+}
+
+/* стилизация выпадающей информации */
+.service:hover {
+	animation-name: service_height_hover;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-delay: alternate-reverse;
+	transition-property: height;
+}
+
+@keyframes service_height_hover {
+	from {
+		padding-bottom: 1%;
+	}
+
+	to {
+		padding-bottom: 2%;
+	}
+}
+
+.service:not(:hover) {
+	animation-name: service_height_hover_after;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-delay: alternate-reverse;
+	transition-property: height;
+}
+
+@keyframes service_height_hover_after {
+	from {
+		padding-bottom: 2%;
+	}
+
+	to {
+		padding-bottom: 1%
+	}
+}
+
+
+.service_photo {
+	width: 15%;
+	margin-right: 300px;
+}
+
+/* Стили для текста, который должен появляться */
+.service_text {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s linear, visibility 1s linear, transform 1s linear;
+}
+
+/* Появление текста при наведении */
+.service:hover .service_text {
+	opacity: 1;
+	visibility: visible;
+}
+
+.service_photo {
+	transition: transform 1s ease;
+}
+
+.service:hover .service_photo {
+	transform: scale(1.1);
+}
+
+/* FORM */
+.form {
+	background-color: var(--text-color-white);
+}
+
+.form_down {
+	display: flex;
+	flex-direction: row;
+	column-gap: 50px;
+	align-items: center;
+}
+
+.form_right {
+	display: flex;
+	flex-direction: column;
+}
+
+.subscribe {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+
+.checkbox_ {
+	display: flex;
+	flex-direction: row;
+	accent-color: var(--accent-color);
+	column-gap: 15px;
+}

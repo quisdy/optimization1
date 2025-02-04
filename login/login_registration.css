@@ -1,0 +1,43 @@
+:root {
+	--accent-color: #8C7FCC;
+	--accent-color-light: #c8c8ff;
+	--text-color: #383838;
+	--text-color-white: #FBFBFF;
+	--gap_1: 150px;
+	--gap_2: 250px;
+	--gap_section: 100px;
+}
+
+.form_down {
+	display: flex;
+	flex-direction: row;
+	column-gap: 50px;
+	align-items: center;
+}
+
+.form_right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	row-gap: 20px;
+	background: #FBFBFF;
+}
+
+.subscribe {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+#form_bot{
+	width: fit-content;
+	text-align: center;
+	align-self: center;
+}
+
+#stars_reg{
+	width: 40%;
+}

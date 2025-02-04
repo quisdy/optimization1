@@ -1,0 +1,93 @@
+.service {
+	position: relative;
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: space-between;
+	border-bottom: solid 5px var(--accent-color);
+	transition: 1.5s;
+}
+
+.service_photo {
+	width: 200px;
+	margin-right: 300px;
+}
+
+
+#service_list li {
+	list-style: outside;
+	list-style-type: disc;
+}
+
+.service_list {
+	margin-top: 15px;
+}
+
+/* стилизация выпадающей информации */
+.service:hover {
+	animation-name: service_height_hover;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-delay: alternate-reverse;
+	transition-property: height;
+}
+
+@keyframes service_height_hover {
+	from {
+		height: 250px;
+	}
+
+	to {
+		height: 350px;
+	}
+}
+
+.service:not(:hover) {
+	animation-name: service_height_hover_after;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-delay: alternate-reverse;
+	transition-property: height;
+}
+
+@keyframes service_height_hover_after {
+	from {
+		height: 350px;
+	}
+
+	to {
+		height: 200px;
+	}
+}
+
+.service_photo {
+	margin-right: 300px;
+	width: fit-content;
+}
+
+/* Стили для текста, который должен появляться */
+.service_text {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s linear, visibility 1.5s linear, transform 2s linear;
+	padding: 20px;
+}
+
+/* Появление текста при наведении */
+.service:hover .service_text {
+	opacity: 1;
+	visibility: visible;
+}
+
+.service_photo {
+	transition: transform 1s ease;
+}
+
+.service:hover .service_photo {
+	transform: scale(1.1);
+}
