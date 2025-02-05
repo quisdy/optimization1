@@ -102,12 +102,11 @@ p {
 h1 {
 	color: var(--accent-color);
 	font-family: Geist;
-	font-size: 110px;
+	font-size: 6.875rem;
 	font-weight: 500;
-	line-height: 100px;
-	letter-spacing: 5px;
+	line-height: 6.25rem;
+	letter-spacing: 0.313rem;
 	text-transform: uppercase;
-	transition: 1s;
 }
 
 #h1_white {
